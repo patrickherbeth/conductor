@@ -19,7 +19,7 @@ public class ApplicationService implements InterfaceApplicationService {
 	private DocumentRepository repository;
 
 	/**
-	 * Método para salvar documentos
+	 * Method for saving documents
 	 */
 	@Override
 	public void save(Document document) {
@@ -28,7 +28,7 @@ public class ApplicationService implements InterfaceApplicationService {
 	}
 
 	/**
-	 * Método para listar documentos
+	 * Method for listing documents
 	 */
 	@Override
 	public List<Document> list() {
@@ -42,7 +42,7 @@ public class ApplicationService implements InterfaceApplicationService {
 	}
 
 	/**
-	 * Método para buscar pelo ID
+	 * Method to search by ID
 	 */
 	@Override
 	public Optional<Document> filterById(String id) {
@@ -58,6 +58,10 @@ public class ApplicationService implements InterfaceApplicationService {
 		return repository.findOne(example);
 	}
 
+	/**
+	 * Method for printing documents
+	 * @param document
+	 */
 	public void print(Document document) {
 		System.out.println(document);
 	}
